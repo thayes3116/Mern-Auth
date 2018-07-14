@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Login.css';
 
 class Login extends Component {
+  state = {
+    username: '',
+    password: '',
+    message: ''
+  };
 
-  constructor() {
-    super();
-    this.state = {
-      username: '',
-      password: '',
-      message: ''
-    };
-  }
   onChange = (e) => {
     const state = this.state
     state[e.target.name] = e.target.value;

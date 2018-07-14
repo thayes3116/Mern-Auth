@@ -29,6 +29,7 @@ router.post('/login', function(req, res) {
   User.findOne({
     username: req.body.username
   }, function(err, user) {
+    console.log(user);
     if (err) throw err;
 
     if (!user) {

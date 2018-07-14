@@ -1,3 +1,1 @@
-module.exports = {
-  'secret':'mernsecure'
-};
+export default { secret: 'mernsecure' };

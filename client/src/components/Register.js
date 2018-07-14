@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import './Login.css';
 
 class Create extends Component {
+  state = {
+    username: '',
+    password: ''
+  };
 
-  constructor() {
-    super();
-    this.state = {
-      username: '',
-      password: ''
-    };
-  }
   onChange = (e) => {
-    const state = this.state
-    state[e.target.name] = e.target.value;
-    this.setState(state);
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
   }
 
   onSubmit = (e) => {
